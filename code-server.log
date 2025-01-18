@@ -1,0 +1,68 @@
+[2025-01-18T03:52:43.346Z] info  code-server 4.96.2 08cbdfbdf11925e8a14ee03de97b942bba7e8a94
+[2025-01-18T03:52:43.347Z] info  Using user-data-dir /root/.local/share/code-server
+[2025-01-18T03:52:43.394Z] info  Using config file /home/ubuntu/.config/code-server/config.yaml
+[2025-01-18T03:52:43.394Z] info  HTTPS server listening on https://0.0.0.0/
+[2025-01-18T03:52:43.394Z] info    - Authentication is enabled
+[2025-01-18T03:52:43.395Z] info      - Using password from /home/ubuntu/.config/code-server/config.yaml
+[2025-01-18T03:52:43.395Z] info    - Using certificate for HTTPS: /home/ubuntu/.config/code-server/selfsigned.crt
+[2025-01-18T03:52:43.395Z] info  Session server listening on /root/.local/share/code-server/code-server-ipc.sock
+[03:59:29] 
+
+
+
+
+[03:59:29] Extension host agent started.
+[03:59:29] Started initializing default profile extensions in extensions installation folder. file:///root/.local/share/code-server/extensions
+[03:59:29] Completed initializing default profile extensions in extensions installation folder. file:///root/.local/share/code-server/extensions
+File not found: /var/app/code-server/lib/vscode/node_modules/vsda/rust/web/vsda_bg.wasm
+File not found: /var/app/code-server/lib/vscode/node_modules/vsda/rust/web/vsda.js
+[03:59:51] [<unknown>][4e03af45][ManagementConnection] New connection established.
+[03:59:56] [<unknown>][e3ce23c7][ExtensionHostConnection] New connection established.
+[03:59:56] [<unknown>][e3ce23c7][ExtensionHostConnection] <3234> Launched Extension Host Process.
+[04:16:01] Getting Manifest... ms-python.python
+[04:16:01] Installing extension: ms-python.python {
+  isMachineScoped: false,
+  installPreReleaseVersion: false,
+  pinned: false,
+  installOnlyNewlyAddedFromExtensionPack: true,
+  isApplicationScoped: false,
+  profileLocation: wr {
+    scheme: 'file',
+    authority: '',
+    path: '/root/.local/share/code-server/extensions/extensions.json',
+    query: '',
+    fragment: '',
+    _formatted: 'file:///root/.local/share/code-server/extensions/extensions.json',
+    _fsPath: '/root/.local/share/code-server/extensions/extensions.json'
+  },
+  productVersion: { version: '1.96.2', date: '2024-12-19T21:23:46.441Z' }
+}
+[04:16:02] Getting Manifest... ms-python.debugpy
+[04:16:02] Installing extension: ms-python.debugpy {
+  isMachineScoped: false,
+  installPreReleaseVersion: false,
+  pinned: false,
+  installOnlyNewlyAddedFromExtensionPack: true,
+  isApplicationScoped: false,
+  profileLocation: wr {
+    scheme: 'file',
+    authority: '',
+    path: '/root/.local/share/code-server/extensions/extensions.json',
+    query: '',
+    fragment: '',
+    _formatted: 'file:///root/.local/share/code-server/extensions/extensions.json',
+    _fsPath: '/root/.local/share/code-server/extensions/extensions.json'
+  },
+  productVersion: { version: '1.96.2', date: '2024-12-19T21:23:46.441Z' },
+  context: { dependecyOrPackExtensionInstall: true }
+}
+[04:16:05] Could not load vsce-sign module Cannot find package '@vscode/vsce-sign' imported from /var/app/code-server/lib/vscode/out/server-main.js
+[04:16:05] Extension signature verification is not done: ms-python.python
+[04:16:05] Could not load vsce-sign module Cannot find package '@vscode/vsce-sign' imported from /var/app/code-server/lib/vscode/out/server-main.js
+[04:16:05] Extension signature verification is not done: ms-python.debugpy
+[04:16:06] Extracted extension to file:///root/.local/share/code-server/extensions/ms-python.debugpy-2024.14.0-linux-x64: ms-python.debugpy
+[04:16:06] Renamed to /root/.local/share/code-server/extensions/ms-python.debugpy-2024.14.0-linux-x64
+[04:16:07] Extracted extension to file:///root/.local/share/code-server/extensions/ms-python.python-2024.23.0-dev-universal: ms-python.python
+[04:16:07] Renamed to /root/.local/share/code-server/extensions/ms-python.python-2024.23.0-dev-universal
+[04:16:07] Extension installed successfully: ms-python.debugpy file:///root/.local/share/code-server/extensions/extensions.json
+[04:16:07] Extension installed successfully: ms-python.python file:///root/.local/share/code-server/extensions/extensions.json
