@@ -75,3 +75,38 @@ File not found: /var/app/code-server/lib/vscode/node_modules/vsda/rust/web/vsda.
 [05:32:25] [<unknown>][4e03af45][ManagementConnection] The client has reconnected.
 [05:32:26] [<unknown>][4e03af45][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
 [05:37:25] [<unknown>][e3ce23c7][ExtensionHostConnection] <3234> Extension Host Process exited with code: 0, signal: null.
+[08:32:32] [<unknown>][4e03af45][ManagementConnection] The reconnection grace time of 3h has expired, so the connection will be disposed.
+File not found: /var/app/code-server/lib/vscode/node_modules/vsda/rust/web/vsda_bg.wasm
+File not found: /var/app/code-server/lib/vscode/node_modules/vsda/rust/web/vsda.js
+[11:43:11] [<unknown>][52bf5279][ManagementConnection] New connection established.
+[11:43:13] [<unknown>][61443827][ExtensionHostConnection] New connection established.
+[11:43:13] [<unknown>][61443827][ExtensionHostConnection] <18548> Launched Extension Host Process.
+[11:45:08] [<unknown>][52bf5279][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+[14:45:14] [<unknown>][52bf5279][ManagementConnection] The reconnection grace time of 3h has expired, so the connection will be disposed.
+[14:45:20] [<unknown>][61443827][ExtensionHostConnection] <18548> Extension Host Process exited with code: 0, signal: null.
+File not found: /var/app/code-server/lib/vscode/node_modules/vsda/rust/web/vsda_bg.wasm
+[10:52:13] [<unknown>][179c67d8][ManagementConnection] New connection established.
+File not found: /var/app/code-server/lib/vscode/node_modules/vsda/rust/web/vsda.js
+[10:52:15] [<unknown>][f081e0cf][ExtensionHostConnection] New connection established.
+[10:52:15] [<unknown>][f081e0cf][ExtensionHostConnection] <25361> Launched Extension Host Process.
+[11:11:54] [<unknown>][179c67d8][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+Error: Unexpected SIGPIPE
+    at process.<anonymous> (file:///var/app/code-server/lib/vscode/out/server-main.js:207:7980)
+    at process.emit (node:events:530:35)
+[11:11:54] Error: Unexpected SIGPIPE
+    at process.<anonymous> (file:///var/app/code-server/lib/vscode/out/server-main.js:188:1327)
+    at process.emit (node:events:530:35)
+[11:12:16] [<unknown>][179c67d8][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+[11:12:16] [<unknown>][f081e0cf][ExtensionHostConnection] The client has reconnected.
+[11:12:17] [<unknown>][179c67d8][ManagementConnection] The client has reconnected.
+[11:12:20] [<unknown>][179c67d8][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+[14:12:26] [<unknown>][179c67d8][ManagementConnection] The reconnection grace time of 3h has expired, so the connection will be disposed.
+[14:12:32] [<unknown>][f081e0cf][ExtensionHostConnection] <25361> Extension Host Process exited with code: 0, signal: null.
+[16:50:40] [<unknown>][179c67d8][ManagementConnection] Unknown reconnection token (seen before).
+[16:50:40] [<unknown>][f081e0cf][ExtensionHostConnection] Unknown reconnection token (seen before).
+Failed login attempt {"remoteAddress":"174.52.211.236","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0","timestamp":1737763497}
+File not found: /var/app/code-server/lib/vscode/node_modules/vsda/rust/web/vsda_bg.wasm
+File not found: /var/app/code-server/lib/vscode/node_modules/vsda/rust/web/vsda.js
+[00:07:49] [<unknown>][a0be241c][ManagementConnection] New connection established.
+[00:07:51] [<unknown>][39f62d05][ExtensionHostConnection] New connection established.
+[00:07:51] [<unknown>][39f62d05][ExtensionHostConnection] <53819> Launched Extension Host Process.
