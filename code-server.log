@@ -123,3 +123,59 @@ File not found: /var/app/code-server/lib/vscode/node_modules/vsda/rust/web/vsda.
 [01:40:25] [<unknown>][d08bf002][ExtensionHostConnection] New connection established.
 [01:40:25] [<unknown>][d08bf002][ExtensionHostConnection] <107082> Launched Extension Host Process.
 [01:53:25] [File Watcher (node.js)] Watcher shutdown because watched path got deleted
+[02:38:09] [<unknown>][c1de7bb6][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+[05:38:16] [<unknown>][c1de7bb6][ManagementConnection] The reconnection grace time of 3h has expired, so the connection will be disposed.
+[05:38:22] [<unknown>][d08bf002][ExtensionHostConnection] <107082> Extension Host Process exited with code: 0, signal: null.
+Failed login attempt {"remoteAddress":"174.52.211.236","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0","timestamp":1739319496}
+File not found: /var/app/code-server/lib/vscode/node_modules/vsda/rust/web/vsda_bg.wasm
+[00:20:50] [<unknown>][5ee4e8fd][ManagementConnection] New connection established.
+File not found: /var/app/code-server/lib/vscode/node_modules/vsda/rust/web/vsda.js
+[00:20:52] [<unknown>][b3d7ea68][ExtensionHostConnection] New connection established.
+[00:20:52] [<unknown>][b3d7ea68][ExtensionHostConnection] <158131> Launched Extension Host Process.
+[00:20:59] Getting Manifest... ms-python.debugpy
+[00:20:59] Getting Manifest... ms-python.python
+[00:21:00] Installing extension: ms-python.debugpy {
+  productVersion: { version: '1.96.2', date: '2024-12-19T21:23:46.441Z' },
+  pinned: false,
+  operation: 3,
+  isApplicationScoped: false,
+  installOnlyNewlyAddedFromExtensionPack: true,
+  profileLocation: wr {
+    scheme: 'file',
+    authority: '',
+    path: '/root/.local/share/code-server/extensions/extensions.json',
+    query: '',
+    fragment: '',
+    _formatted: 'file:///root/.local/share/code-server/extensions/extensions.json',
+    _fsPath: '/root/.local/share/code-server/extensions/extensions.json'
+  }
+}
+[00:21:00] Installing extension: ms-python.python {
+  productVersion: { version: '1.96.2', date: '2024-12-19T21:23:46.441Z' },
+  pinned: false,
+  operation: 3,
+  isApplicationScoped: false,
+  installOnlyNewlyAddedFromExtensionPack: true,
+  profileLocation: wr {
+    scheme: 'file',
+    authority: '',
+    path: '/root/.local/share/code-server/extensions/extensions.json',
+    query: '',
+    fragment: '',
+    _formatted: 'file:///root/.local/share/code-server/extensions/extensions.json',
+    _fsPath: '/root/.local/share/code-server/extensions/extensions.json'
+  }
+}
+[00:21:00] Getting Manifest... ms-python.python
+[00:21:02] Could not load vsce-sign module Cannot find package '@vscode/vsce-sign' imported from /var/app/code-server/lib/vscode/out/server-main.js
+[00:21:02] Extension signature verification is not done: ms-python.python
+[00:21:05] Could not load vsce-sign module Cannot find package '@vscode/vsce-sign' imported from /var/app/code-server/lib/vscode/out/server-main.js
+[00:21:05] Extension signature verification is not done: ms-python.debugpy
+[00:21:06] Extracted extension to file:///root/.local/share/code-server/extensions/ms-python.python-2025.0.0-universal: ms-python.python
+[00:21:06] Renamed to /root/.local/share/code-server/extensions/ms-python.python-2025.0.0-universal
+[00:21:06] Marked extension as uninstalled ms-python.python-2024.23.0-dev-universal
+[00:21:06] Extension installed successfully: ms-python.python file:///root/.local/share/code-server/extensions/extensions.json
+[00:21:06] Extracted extension to file:///root/.local/share/code-server/extensions/ms-python.debugpy-2025.0.0-linux-x64: ms-python.debugpy
+[00:21:06] Renamed to /root/.local/share/code-server/extensions/ms-python.debugpy-2025.0.0-linux-x64
+[00:21:06] Marked extension as uninstalled ms-python.debugpy-2024.14.0-linux-x64
+[00:21:06] Extension installed successfully: ms-python.debugpy file:///root/.local/share/code-server/extensions/extensions.json
