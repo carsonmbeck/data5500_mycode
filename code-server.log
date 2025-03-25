@@ -284,3 +284,43 @@ File not found: /var/app/code-server/lib/vscode/node_modules/vsda/rust/web/vsda_
 [04:16:43] Renamed to /root/.local/share/code-server/extensions/ms-python.python-2025.2.0-universal
 [04:16:43] Marked extension as uninstalled ms-python.python-2025.0.0-universal
 [04:16:43] Extension installed successfully: ms-python.python file:///root/.local/share/code-server/extensions/extensions.json
+[04:33:08] [<unknown>][5f0b8fb2][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+[07:33:16] [<unknown>][5f0b8fb2][ManagementConnection] The reconnection grace time of 3h has expired, so the connection will be disposed.
+[07:33:22] [<unknown>][c87e2d7d][ExtensionHostConnection] <302440> Extension Host Process exited with code: 0, signal: null.
+File not found: /var/app/code-server/lib/vscode/node_modules/vsda/rust/web/vsda_bg.wasm
+File not found: /var/app/code-server/lib/vscode/node_modules/vsda/rust/web/vsda.js
+[03:17:57] [<unknown>][ee81ea82][ManagementConnection] New connection established.
+[03:18:01] [<unknown>][60b9780c][ExtensionHostConnection] New connection established.
+[03:18:01] [<unknown>][60b9780c][ExtensionHostConnection] <314639> Launched Extension Host Process.
+[04:52:22] [<unknown>][ee81ea82][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+[07:52:29] [<unknown>][ee81ea82][ManagementConnection] The reconnection grace time of 3h has expired, so the connection will be disposed.
+[07:52:35] [<unknown>][60b9780c][ExtensionHostConnection] <314639> Extension Host Process exited with code: 0, signal: null.
+File not found: /var/app/code-server/lib/vscode/node_modules/vsda/rust/web/vsda.js
+File not found: /var/app/code-server/lib/vscode/node_modules/vsda/rust/web/vsda_bg.wasm
+[01:00:45] [<unknown>][c25033c9][ManagementConnection] New connection established.
+[01:00:47] [<unknown>][bf265b56][ExtensionHostConnection] New connection established.
+[01:00:47] [<unknown>][bf265b56][ExtensionHostConnection] <374948> Launched Extension Host Process.
+[01:00:53] Getting Manifest... ms-python.debugpy
+[01:00:53] Installing extension: ms-python.debugpy {
+  productVersion: { version: '1.96.2', date: '2024-12-19T21:23:46.441Z' },
+  pinned: false,
+  operation: 3,
+  isApplicationScoped: false,
+  installOnlyNewlyAddedFromExtensionPack: true,
+  profileLocation: wr {
+    scheme: 'file',
+    authority: '',
+    path: '/root/.local/share/code-server/extensions/extensions.json',
+    query: '',
+    fragment: '',
+    _formatted: 'file:///root/.local/share/code-server/extensions/extensions.json',
+    _fsPath: '/root/.local/share/code-server/extensions/extensions.json'
+  }
+}
+[01:00:54] Getting Manifest... ms-python.python
+[01:00:57] Could not load vsce-sign module Cannot find package '@vscode/vsce-sign' imported from /var/app/code-server/lib/vscode/out/server-main.js
+[01:00:57] Extension signature verification is not done: ms-python.debugpy
+[01:00:58] Extracted extension to file:///root/.local/share/code-server/extensions/ms-python.debugpy-2025.4.1-linux-x64: ms-python.debugpy
+[01:00:58] Renamed to /root/.local/share/code-server/extensions/ms-python.debugpy-2025.4.1-linux-x64
+[01:00:58] Marked extension as uninstalled ms-python.debugpy-2025.4.0-linux-x64
+[01:00:58] Extension installed successfully: ms-python.debugpy file:///root/.local/share/code-server/extensions/extensions.json
