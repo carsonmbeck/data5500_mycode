@@ -1,0 +1,129 @@
+# CHATGPT questions:: 
+# How do I fetch realtime crypto data from CoinGecko?
+# How do I convert coin IDs to their ticker symbols?
+# How do I build a directed graph using networkx with weighted edges?
+# How do I traverse all simple paths between two node in the graph?
+# How do I calculate the product of edge weights along a path?
+# How can I detect arbitrage opportunities by comparing forward and reverse paths?
+# Other misc code troubleshotting 
+
+import requests
+import networkx as nx
+
+def product_of_path(path, graph):
+    """
+    Calculate the product of the weights along a given path in the graph.
+    
+    Args:
+        path (list): List of node labels representing the path.
+        graph (nx.DiGraph): The directed graph with weighted edges.
+    
+    Returns:
+        float: The product of all edge weights along the path.
+    """
+    product = 1.0
+    for i in range(len(path) - 1):
+        product *= graph[path[i]][path[i+1]]['weight']
+    return product
+
+def main():
+    # API URL to fetch the exchange rates for the top 7 cryptocurrencies
+    url = ("https://api.coingecko.com/api/v3/simple/price?"
+           "ids=ethereum,bitcoin,litecoin,ripple,cardano,bitcoin-cash,eos&"
+           "vs_currencies=eth,btc,ltc,xrp,ada,bch,eos")
+    
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+    except Exception as e:
+        print(f"Error fetching data from CoinGecko: {e}")
+        return
+
+    data = response.json()
+
+    # Mapping from coin full name (id) to its ticker symbol (vs_currency)
+    coin_to_ticker = {
+        'ripple': 'xrp',
+        'cardano': 'ada',
+        'bitcoin-cash': 'bch',
+        'eos': 'eos',
+        'litecoin': 'ltc',
+        'ethereum': 'eth',
+        'bitcoin': 'btc'
+    }
+
+    # Create a directed graph to represent the currency exchange rates
+    g = nx.DiGraph()
+
+    # Populate the graph with weighted edges from the fetched data.
+    # Each edge goes from the coin's ticker to the vs_currency ticker.
+    for coin, prices in data.items():
+        if coin not in coin_to_ticker:
+            continue
+        src_ticker = coin_to_ticker[coin]
+        for vs_currency, rate in prices.items():
+            # Only add the edge if the vs_currency is in our top currencies and avoid self-loops.
+            if vs_currency in coin_to_ticker.values() and vs_currency != src_ticker:
+                g.add_edge(src_ticker, vs_currency, weight=rate)
+
+    # Debug output: show the nodes and edges in the graph.
+    print("Nodes in graph:", list(g.nodes()))
+    print("\nEdges in graph:")
+    for u, v, d in g.edges(data=True):
+        print(f"{u} -> {v} with weight {d['weight']}")
+
+    best_factor = None
+    worst_factor = None
+    best_cycle = None
+    worst_cycle = None
+
+    print("\nArbitrage Opportunities:")
+    # Iterate over all distinct pairs of nodes to find arbitrage cycles.
+    for source in g.nodes():
+        for target in g.nodes():
+            if source == target:
+                continue
+            # Find all forward paths from source to target.
+            forward_paths = list(nx.all_simple_paths(g, source, target))
+            # Find all reverse paths from target back to source.
+            reverse_paths = list(nx.all_simple_paths(g, target, source))
+            # Only process if both directions have at least one path.
+            if not forward_paths or not reverse_paths:
+                continue
+            # Evaluate every combination of forward and reverse paths.
+            for fpath in forward_paths:
+                forward_product = product_of_path(fpath, g)
+                for rpath in reverse_paths:
+                    reverse_product = product_of_path(rpath, g)
+                    # Calculate the arbitrage factor by multiplying the two path products.
+                    factor = forward_product * reverse_product
+                    # Output the details of this arbitrage cycle.
+                    print(f"Cycle: Forward {fpath} | Reverse {rpath}")
+                    print(f"       Forward weight: {forward_product:.6f}, Reverse weight: {reverse_product:.6f}, Factor: {factor:.6f}\n")
+                    
+                    # Track the best (highest) and worst (lowest) arbitrage factors.
+                    if best_factor is None or factor > best_factor:
+                        best_factor = factor
+                        best_cycle = (fpath, rpath)
+                    if worst_factor is None or factor < worst_factor:
+                        worst_factor = factor
+                        worst_cycle = (fpath, rpath)
+
+    # Summarize the best and worst arbitrage opportunities.
+    print("Summary of Arbitrage Opportunities:")
+    if best_cycle:
+        print("Best Arbitrage Opportunity (Greatest deviation from equilibrium):")
+        print(f"Cycle: Forward {best_cycle[0]} | Reverse {best_cycle[1]}")
+        print(f"Arbitrage Factor: {best_factor:.6f}")
+    else:
+        print("No arbitrage opportunities found for best factor.")
+    
+    if worst_cycle:
+        print("\nWorst Arbitrage Opportunity (Smallest deviation from equilibrium):")
+        print(f"Cycle: Forward {worst_cycle[0]} | Reverse {worst_cycle[1]}")
+        print(f"Arbitrage Factor: {worst_factor:.6f}")
+    else:
+        print("No arbitrage opportunities found for worst factor.")
+
+if __name__ == "__main__":
+    main()

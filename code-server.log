@@ -324,3 +324,11 @@ File not found: /var/app/code-server/lib/vscode/node_modules/vsda/rust/web/vsda_
 [01:00:58] Renamed to /root/.local/share/code-server/extensions/ms-python.debugpy-2025.4.1-linux-x64
 [01:00:58] Marked extension as uninstalled ms-python.debugpy-2025.4.0-linux-x64
 [01:00:58] Extension installed successfully: ms-python.debugpy file:///root/.local/share/code-server/extensions/extensions.json
+[01:22:36] [<unknown>][c25033c9][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+[04:22:43] [<unknown>][c25033c9][ManagementConnection] The reconnection grace time of 3h has expired, so the connection will be disposed.
+[04:22:49] [<unknown>][bf265b56][ExtensionHostConnection] <374948> Extension Host Process exited with code: 0, signal: null.
+File not found: /var/app/code-server/lib/vscode/node_modules/vsda/rust/web/vsda_bg.wasm
+File not found: /var/app/code-server/lib/vscode/node_modules/vsda/rust/web/vsda.js
+[04:14:42] [<unknown>][052ba53f][ManagementConnection] New connection established.
+[04:14:45] [<unknown>][19aaebe0][ExtensionHostConnection] New connection established.
+[04:14:45] [<unknown>][19aaebe0][ExtensionHostConnection] <441909> Launched Extension Host Process.
