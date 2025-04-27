@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-04-27T21:25:59.434663",
+  "best_triangle": {
+    "factor": 1.000229164524072,
+    "cycle": [
+      "eth",
+      "eos",
+      "bch"
+    ]
+  },
+  "worst_triangle": {
+    "factor": 0.9983383561799998,
+    "cycle": [
+      "xlm",
+      "btc",
+      "eth"
+    ]
+  }
+}
